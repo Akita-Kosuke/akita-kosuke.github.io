@@ -1,7 +1,7 @@
 +++
 title = "Papers and  Talks"
 hascode = true
-date = Date(2019, 3, 22)
+date = Date(2025, 7, 12)
 rss = "A short description of the page which would serve as **blurb** in a `RSS` feed; you can use basic markdown here but the whole description string must be a single line (not a multiline string). Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don't expect maths or fancy styling to work; images should be ok though: ![](https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg)"
 
 tags = ["syntax", "code"]
@@ -10,48 +10,32 @@ tags = ["syntax", "code"]
 
 # Papers
 
-* K. Akita, Y. Miytake, D. Furihta.
+* K. Akita, Y. Miytake, D. Furihta. Composing a surrogate observation operator for sequential data assimilation. JSIAM Letters, 14(2022), 123-126.
 
 # Talks
 
+* 秋田康輔．観測演算子を未知とするデータ同化問題への検討．第3回固体地球科学データ同化/データ駆動型地球科学に関する研究会，2022年3月23日．
+
+* 秋田康輔，宮武勇登，降籏大介．観測演算子を未知とする条件下での機械学習を活用したデータ同化推定とその評価，2021年度応用数学合同研究集会，
+
+* 秋田康輔．観測演算子を未知とする条件下でのデータ同化推定手法の提案とその研究背景．東北大学大学院理学研究科地球物理学専攻固体地球物理学講座の研究セミナー，2021年12月8日．
+
+ * 秋田康輔．データ同化における状態空間モデルの不確実性について．応用数学フレッシュマンセミナー2021，2021年12月6日．
+
+* 秋田康輔，宮武勇登，降籏大介．観測演算子を未知とする条件下での深層学習を用いたデータ同化手法の提案．数学・数理科学専攻若手研究者のための異分野・異業種研究交流会，2021年11月13日．
+
+* 秋田康輔．観測演算子を未知とする条件下での深層学習を用いたデータ同化推定とその研究背景．固体地球科学とデータ同化 2021年度第1回勉強会，
+2021年11月10日．
+
+* 秋田康輔，宮武勇登，降籏大介．観測演算子の推測に深層学習を用いるデータ同化推定．2021年度日本応用数理学会年会，2021年9月8日．
+
+* 秋田康輔，宮武勇登，降籏大介．深層学習を用いてモデルの不確かさを考慮するデータ同化手法の提案．第6回学生研究発表会（日本応用数理学会・若手の会），2021年3月8日．
 
 
 
-If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.
 
-Indeed, what happens is that the code block gets saved as a script which then gets executed.
-This also allows for that block to not be re-executed every time you change something _else_ on the page.
 
-Here's a simple example (change values in `a` to see the results being live updated):
 
-```julia:./exdot.jl
-using LinearAlgebra
-a = [1, 2, 3, 3, 4, 5, 2, 2]
-@show dot(a, a)
-println(dot(a, a))
-```
 
-You can now show what this would look like:
 
-\output{./exdot.jl}
-
-**Notes**:
-* you don't have to specify the `.jl` (see below),
-* you do need to explicitly use print statements or `@show` for things to show, so just leaving a variable at the end like you would in the REPL will show nothing,
-* only Julia code blocks are supported at the moment, there may be a support for scripting languages like `R` or `python` in the future,
-* the way you specify the path is important; see [the docs](https://franklinjl.org/code/#more_on_paths) for more info. If you don't care about how things are structured in your `/assets/` folder, just use `./scriptname.jl`. If you want things to be grouped, use `./group/scriptname.jl`. For more involved uses, see the docs.
-
-Lastly, it's important to realise that if you don't change the content of the code, then that code will only be executed _once_ even if you make multiple changes to the text around it.
-
-Here's another example,
-
-```julia:./code/ex2
-for i ∈ 1:5, j ∈ 1:5
-    print(" ", rpad("*"^i,5), lpad("*"^(6-i),5), j==5 ? "\n" : " "^4)
-end
-```
-
-which gives the (utterly useless):
-
-\output{./code/ex2}
 

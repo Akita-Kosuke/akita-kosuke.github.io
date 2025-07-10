@@ -4,7 +4,7 @@
 # Biography
 
 I am from Japan.
-My major is ...
+My major is statistical and information mathematics.
 
 # 自己紹介
 
@@ -97,21 +97,7 @@ Now we can write something like
 
 $$  \varphi(\E{X}) \le \E{\varphi(X)}. \label{equation blah} $$
 
-since we've given it the label `\label{equation blah}`, we can refer it like so: \eqref{equation blah} which can be convenient for pages that are math-heavy.
 
-In a similar vein you can cite references that would be at the bottom of the page: \citep{noether15, bezanson17}.
-
-**Note**: the LaTeX commands you define can also incorporate standard markdown (though not in a math environment) so for instance let's define a silly `\bolditalic` command.
-
-\newcommand{\bolditalic}[1]{_**!#1**_} <!--_ ignore this comment, it helps atom to not get confused by the trailing underscore when highlighting the code but is not necessary.-->
-
-and use it \bolditalic{here for example}.
-
-Here's another quick one, a command to change the color:
-
-\newcommand{\col}[2]{~~~<span style="color:~~~#1~~~">~~~!#2~~~</span>~~~}
-
-This is \col{blue}{in blue} or \col{#bf37bc}{in #bf37bc}.
 
 ### A quick note on whitespaces
 
