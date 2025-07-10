@@ -1,11 +1,10 @@
 +++
-title = "Papers and Talks"
+title = "Awards"
 +++
 
-# Papers
+# Awards
 
 
-# Talks
 
 
 
