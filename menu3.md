@@ -1,9 +1,16 @@
 +++
-title = "Awards"
+title = "Others"
 +++
 
-# Awards
+# Awards（受賞歴）
 
+*
+
+# 保有資格・スコア
+
+* TOEIC score：675
+
+* 実用英語技能検定準２級
 
 
 
