@@ -1,20 +1,37 @@
-@def title = "Akita Kosuke（秋田 康輔）"
+@def title = "Kosuke Akita（秋田 康輔）"
 @def tags = ["syntax", "code"]
 
-# Biography
+
+
+# About me
 
 I am from Japan.
+
 My major is statistical and information mathematics.
+
+This winter is very cold and it often rains.
+
+
 
 # 自己紹介
 
 はじめまして．
 
+
+# E-mail
+
+* akita[at]cas.cmc.osaka-u.ac.jp
+
+* u312890a[at]alumni.osaka-u.ac.jp
+
+
+# Address
+
+???
+
+
 \tableofcontents <!-- you can use \toc as well -->
 
-Ps: if you want to modify the header or footer or the general look of the website, adjust the files in
-* `src/_css/` and
-* `src/_html_parts/`.
 
 ## The base with Markdown
 
