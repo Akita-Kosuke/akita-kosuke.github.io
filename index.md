@@ -15,7 +15,7 @@ This winter is very cold and it often rains.
 
 # 自己紹介
 
-はじめまして．???
+はじめまして．
 
 
 # E-mail
