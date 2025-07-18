@@ -5,11 +5,10 @@
 
 # About me
 
-I am from Japan.
+My major is statistics and information mathematics.
 
-My major is statistical and information mathematics.
-
-This winter is very cold and it often rains.
+In particular, I am working on data assimilation with uncertainty involving unknown models. 
+By considering tractable data transformation using kernel methods and Koopman operators, I aim to derive appropriate state estimation schemes combined with machine learning theoretically.
 
 
 
@@ -22,12 +21,11 @@ This winter is very cold and it often rains.
 
 * akita[at]cas.cmc.osaka-u.ac.jp
 
-* u312890a[at]alumni.osaka-u.ac.jp
 
 
 # Address
 
-???
+* ???
 
 
 \tableofcontents <!-- you can use \toc as well -->
