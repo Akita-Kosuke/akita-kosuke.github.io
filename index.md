@@ -20,7 +20,6 @@ By considering tractable data transformation using kernel methods or Koopman ope
 * akita[at]cas.cmc.osaka-u.ac.jp
 
 
-
 # Address
 
 * ???
