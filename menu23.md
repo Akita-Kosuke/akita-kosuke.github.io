@@ -1,17 +1,19 @@
 +++
 title = "katex 練習"
+hascode = true
+tags = ["syntax", "code", "image"]
 +++
 
-Katex の練習．
+専門数学問題
 
-\toc
+\tableofcontents
 
 # 2016-1
 
 次の問いに答えよ．
 
-1. $r$, $s$を $r<s$ である有理数とするとき，$r<c<s$ をみたす無理数 $c$ が存在することを示せ．
-1. $\alpha$, $\beta$を$\alpha < \beta$ である有理数とするとき，$\alpha <q<\beta$ をみたす有理数 $q$ が存在することを示せ．
+1. $r$, $s$ を $r < s$ である有理数とするとき，$r<c<s$ をみたす無理数 $c$ が存在することを示せ．
+1. $\alpha$, $\beta$ を $\alpha < \beta$ である有理数とするとき，$\alpha <q<\beta$ をみたす有理数 $q$ が存在することを示せ．
 1. 
 1. 
 
@@ -27,11 +29,11 @@ Katex の練習．
 
 いま，$f(x)$ がさらに次の性質を持つとする．
 
-$$f(x+y) = f(x)+f(y),　f(xy)=f(x)f(y),　f(1)=1 \notag$$
+$$f(x+y) = f(x)+f(y),　f(xy)=f(x)f(y),　f(1)=1$$
 
 このとき，以下を示せ．
 1. すべての有理数 $x$ に対して $f(x)=x$ である．
-1. 実数 $x$, $y$ について，$x \leq y$ ならば $f(x) \leq f(y)$である．
+1. 実数 $x$, $y$ について，$x \leq y$ ならば $f(x) \leq f(y)$ である．
 1. すべての実数 $x$ に対して $f(x)=x$ である．
 
 # 2015-2
@@ -48,8 +50,8 @@ $$ F(x)+C $$
 
 # 2013-2
 円周率を $\pi$ とする．正の整数 $n$ に対し
-$$ a_n = \int_0^{2-\sqrt{3}} \frac{1-x^{4n}}{1+x^2} dx \notag$$
-$$ b_n = \int_0^{2-\sqrt{3}} \frac{1+x^{4n+2}}{1+x^2} dx \notag$$
+$$ a_n = \int_0^{2-\sqrt{3}} \frac{1-x^{4n}}{1+x^2} dx $$
+$$ b_n = \int_0^{2-\sqrt{3}} \frac{1+x^{4n+2}}{1+x^2} dx $$
 とおく．
-1. $\lin_{n \rightarrow \infty} a_n = \lin_{n \rightarrow \infty} b_n = \dftac{\pi}{12} $ であることを示せ．
+1. $\lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow \infty} b_n = \dfrac{\pi}{12} $ であることを示せ．
 1. $3.141<\pi<3.142$ を証明せよ．ただし $1.7320508 < \sqrt{3} < 1.7320509$ である．
