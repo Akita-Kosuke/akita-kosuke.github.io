@@ -6,7 +6,9 @@ tags = ["syntax", "code", "image"]
 
 専門数学問題
 
-\tableofcontents
+<!-- @import "[
+TOC
+]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 # 2016-1
 
@@ -38,12 +40,23 @@ $$f(x+y) = f(x)+f(y),　f(xy)=f(x)f(y),　f(1)=1$$
 
 # 2015-2
 
+
 # 2014-1
 開区間 $(a,b)$ で定義された関数 $f(x)$ の原始関数の1つを $F(x)$ とするとき，任意の原始関数は定数 $C$ を用いて
 $$ F(x)+C $$
 と表すことができる．このことを平均値の定理を用いて証明せよ．
 
 # 2014-2
+すべての素数を小さい順に並べた無限数列を $p_1,p_2,...,p_n,...$ とする．
+1. $n$ を自然数とするとき
+$$ \sum_{k=1}^n \frac{1}{k} < \frac{1-(\frac{1}{p_1})^{n+1}}{1-\frac{1}{p_1}} \times \frac{1-(\frac{1}{p_2})^{n+1}}{1-\frac{1}{p_2}} \times \cdots \frac{1-(\frac{1}{p_n})^{n+1}}{1-\frac{1}{p_n}} $$
+を証明せよ．
+1. 無限級数
+$$ \sum_{k=1}^\infty \left{ -\log \left(1 - \frac{1}{p_k} \right) \right} $$
+は発散することを証明せよ．
+1. 無限級数
+$$ \sum_{k=1}^\infty \frac{1}{p_k} $$
+は発散することを証明せよ．
 
 # 2013-1
 有理数は，整数，有限小数，循環小数のいずれかで表される．これを証明せよ．
@@ -53,5 +66,5 @@ $$ F(x)+C $$
 $$ a_n = \int_0^{2-\sqrt{3}} \frac{1-x^{4n}}{1+x^2} dx $$
 $$ b_n = \int_0^{2-\sqrt{3}} \frac{1+x^{4n+2}}{1+x^2} dx $$
 とおく．
-1. $\lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow \infty} b_n = \dfrac{\pi}{12} $ であることを示せ．
+1. $\displaystyle \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \dfrac{\pi}{12} $ であることを示せ．
 1. $3.141<\pi<3.142$ を証明せよ．ただし $1.7320508 < \sqrt{3} < 1.7320509$ である．
