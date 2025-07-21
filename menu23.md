@@ -6,16 +6,14 @@ tags = ["syntax", "code", "image"]
 
 専門数学問題
 
-<!-- @import "[
-TOC
-]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+\tableofcontents <!-- you can use \toc as well -->
 
 # 2016-1
 
 次の問いに答えよ．
 
-1. $r$, $s$ を $r < s$ である有理数とするとき，$r<c<s$ をみたす無理数 $c$ が存在することを示せ．
-1. $\alpha$, $\beta$ を $\alpha < \beta$ である有理数とするとき，$\alpha <q<\beta$ をみたす有理数 $q$ が存在することを示せ．
+1. $r$, $s$ を $r < s$ である有理数とするとき，$r < c < s$ をみたす無理数 $c$ が存在することを示せ．
+1. $\alpha$, $\beta$ を $\alpha < \beta$ である有理数とするとき，$\alpha < q < \beta$ をみたす有理数 $q$ が存在することを示せ．
 1. 
 1. 
 
@@ -51,10 +49,10 @@ $$ F(x)+C $$
 1. $n$ を自然数とするとき
 $$ \sum_{k=1}^n \frac{1}{k} < \frac{1-(\frac{1}{p_1})^{n+1}}{1-\frac{1}{p_1}} \times \frac{1-(\frac{1}{p_2})^{n+1}}{1-\frac{1}{p_2}} \times \cdots \frac{1-(\frac{1}{p_n})^{n+1}}{1-\frac{1}{p_n}} $$
 を証明せよ．
-1. 無限級数
-$$ \sum_{k=1}^\infty \left{ -\log \left(1 - \frac{1}{p_k} \right) \right} $$
+2. 無限級数
+$$ \sum_{k=1}^\infty \left\{ -\log \left( 1 - \frac{1}{p_k} \right) \right\} $$
 は発散することを証明せよ．
-1. 無限級数
+3. 無限級数
 $$ \sum_{k=1}^\infty \frac{1}{p_k} $$
 は発散することを証明せよ．
 
