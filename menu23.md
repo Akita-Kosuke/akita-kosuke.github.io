@@ -13,13 +13,13 @@ tags = ["syntax", "code", "image"]
 次の問いに答えよ．
 
 1. $r$, $s$ を $r < s$ である有理数とするとき，$r < c < s$ をみたす無理数 $c$ が存在することを示せ．
-1. $\alpha$, $\beta$ を $\alpha < \beta$ である有理数とするとき，$\alpha < q < \beta$ をみたす有理数 $q$ が存在することを示せ．
+1. $\alpha$, $\beta$ を $\alpha < \beta$ である無理数とするとき，$\alpha < q < \beta$ をみたす有理数 $q$ が存在することを示せ．
 1. 
 1. 
 
 # 2016-2
 座標平面において，$x$ 座標と $y$ 座標がともに整数である点を格子点という．
-1. 平行四辺形 $\mathrm{ABCD}$ の頂点のうち，$\mathrm{A}$, $\mathrm{B}$, $\mathrm{C}$ 格子点であるならば，$\mathrm{D}$ も格子点であることを示せ．
+1. 平行四辺形 $\mathrm{ABCD}$ の頂点のうち，$\mathrm{A}$, $\mathrm{B}$, $\mathrm{C}$ が格子点であるならば，$\mathrm{D}$ も格子点であることを示せ．
 1. 
 1. 
 1. 
@@ -47,7 +47,7 @@ $$ F(x)+C $$
 # 2014-2
 すべての素数を小さい順に並べた無限数列を $p_1,p_2,...,p_n,...$ とする．
 1. $n$ を自然数とするとき
-$$ \sum_{k=1}^n \frac{1}{k} < \frac{1-(\frac{1}{p_1})^{n+1}}{1-\frac{1}{p_1}} \times \frac{1-(\frac{1}{p_2})^{n+1}}{1-\frac{1}{p_2}} \times \cdots \frac{1-(\frac{1}{p_n})^{n+1}}{1-\frac{1}{p_n}} $$
+$$ \sum_{k=1}^n \frac{1}{k} < \frac{1-(\frac{1}{p_1})^{n+1}}{1-\frac{1}{p_1}} \times \frac{1-(\frac{1}{p_2})^{n+1}}{1-\frac{1}{p_2}} \times \cdots \times \frac{1-(\frac{1}{p_n})^{n+1}}{1-\frac{1}{p_n}} $$
 を証明せよ．
 2. 無限級数
 $$ \sum_{k=1}^\infty \left\{ -\log \left( 1 - \frac{1}{p_k} \right) \right\} $$
