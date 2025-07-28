@@ -24,3 +24,13 @@ By considering tractable data transformation using kernel methods or Koopman ope
 
 * ???
 
+# Keywords（キーワード）
+
+* データ同化
+* 数学
+* 応用数学
+* 統計科学
+* 大阪大学
+* 情報科学研究科
+
+
