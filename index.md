@@ -12,8 +12,17 @@ By considering tractable data transformation using kernel methods or Koopman ope
 
 # 自己紹介
 
-はじめまして．
+秋田康輔（あきたこうすけ）
 
+## Keywords（キーワード）
+
+* データ同化
+* 数学
+* 応用数学
+* 統計学
+* 情報科学
+* 機械学習
+* 大阪大学
 
 # E-mail
 
@@ -24,13 +33,5 @@ By considering tractable data transformation using kernel methods or Koopman ope
 
 * ???
 
-# Keywords（キーワード）
-
-* データ同化
-* 数学
-* 応用数学
-* 統計科学
-* 大阪大学
-* 情報科学研究科
 
 
