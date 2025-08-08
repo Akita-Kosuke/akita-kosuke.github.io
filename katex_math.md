@@ -16,7 +16,7 @@ tags = ["syntax", "code", "image"]
 1. $\alpha$, $\beta$ を $\alpha < \beta$ である実数とするとき，$\alpha < q < \beta$ をみたす有理数 $q$ が存在することを示せ．
 1. $x$ を有理数の定数とする．このとき，不等式$ \left| x - \dfrac{n}{m} \right| < \dfrac{1}{m^2}$ をみたすような自然数 $m$ と整数 $n$ を用いて $\dfrac{n}{m}$ の形に表すことができる有理数は有限個であることを示せ．
 1. 条件式 $a_1 = a_2 = 1$，$a_{n+2} = a_{n+1} + a_n$（$n = 1,2,3,\cdots$）により数列 $\{ a_n \}$ を定め，$x = \dfrac{1 + \sqrt{5}}{2}$ とする．不等式
-$$ \left| x - \frac{a_{n+1}}{a_n} \right| < \frac{1}{a_n^2} \<space> (n=1,2,3,\cdots)$$ を示せ．
+$$ \left| x - \frac{a_{n+1}}{a_n} \right| < \frac{1}{a_n^2} \quad (n=1,2,3,\cdots)$$ を示せ．
 
 ## 2016-2
 座標平面において，$x$ 座標と $y$ 座標がともに整数である点を格子点という．
@@ -30,7 +30,7 @@ $$ \left| x - \frac{a_{n+1}}{a_n} \right| < \frac{1}{a_n^2} \<space> (n=1,2,3,\c
 
 いま，$f(x)$ がさらに次の性質を持つとする．
 
-$$f(x+y) = f(x)+f(y), \<space> f(xy)=f(x)f(y), \<space> f(1)=1$$
+$$f(x+y) = f(x)+f(y), \quad f(xy)=f(x)f(y), \quad f(1)=1$$
 
 このとき，以下を示せ．
 1. すべての有理数 $x$ に対して $f(x)=x$ である．
@@ -38,11 +38,17 @@ $$f(x+y) = f(x)+f(y), \<space> f(xy)=f(x)f(y), \<space> f(1)=1$$
 1. すべての実数 $x$ に対して $f(x)=x$ である．
 
 ## 2015-2
-数列 $\{a_n\}$ を $a_n = \dfrac{n!}{\sqrt{n} n^n e-{-n}}$ で定める．
+数列 $\{a_n\}$ を $a_n = \dfrac{n!}{\sqrt{n} n^n e^{-n}}$ で定める．
 
 このとき， $\displaystyle \lim_{n \to \infty} a_n = \sqrt{2 \pi}$ であることを，以下の手順で示せ．
-1. 
+1. 数列 $\{b_n\}$ を $\dfrac{2^{2n} (n!)^2}{\sqrt{n} (2n)!}$ で定める．$0 < x < 2\pi$ のとき
+\begin{align}
+\sin^{2n+1}x < \sin^{2n}x < \sin^{2n-1}x \quad (n=1,2,3, \cdots)
+\end{align}
+であることを用いて，
 1. すべての自然数 $n$ に対して
+$$ 0 < \log \dfrac{a_n}{a_{n+1}} < \frac{100}{n(n+1)} $$
+が成り立つことを示せ．
 1. $\displaystyle \lim_{n \to \infty} \dfrac{a_n}{a_{2n}} = 1$ であることを示せ．
 1. $\displaystyle \lim_{n \to \infty} a_n = \sqrt{2 \pi}$ であることを示せ．
 
