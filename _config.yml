@@ -1,5 +1,0 @@
-plugins:
-  - jekyll-sitemap
-
-sitemap:
-  remove_index_html: true
