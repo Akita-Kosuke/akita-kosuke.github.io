@@ -16,7 +16,6 @@ mintoclevel = 2
 ignore = ["node_modules/"]
 keep_path = ["google99f26b157d2cc0de.html"]
 keep_path = ["robots.txt"]
-keep_path = ["sitemap.xml"]
 
 # RSS (the website_{title, descr, url} must be defined to get RSS)
 generate_rss = true
