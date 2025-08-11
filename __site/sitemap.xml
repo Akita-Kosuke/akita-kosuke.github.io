@@ -26,12 +26,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://akita-kosuke.github.io/menu22\index.html</loc>
-    <lastmod>2025-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>https://akita-kosuke.github.io/menu2\index.html</loc>
     <lastmod>2025-07-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -39,6 +33,12 @@
 </url>
 <url>
     <loc>https://akita-kosuke.github.io/menu21\index.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://akita-kosuke.github.io/menu22\index.html</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
