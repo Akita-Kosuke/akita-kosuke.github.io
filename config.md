@@ -3,7 +3,7 @@ Add here global page variables to use throughout your website.
 -->
 @def prettyurls = true
 +++
-author = "Kosuke Akita"
+author = "Kosuke Akita（秋田 康輔）"
 mintoclevel = 2
 
 # uncomment and adjust the following line if the expected base URL of your website is something like [www.thebase.com/yourproject/]
@@ -19,7 +19,7 @@ keep_path = ["google99f26b157d2cc0de.html", "robots.txt"]
 
 # RSS (the website_{title, descr, url} must be defined to get RSS)
 generate_rss = true
-website_title = "Kosuke Akita"
+website_title = "Kosuke Akita（秋田 康輔）"
 website_descr = "Akita's website using Franklin"
 website_url   = "https://akita-kosuke.github.io/"
 +++
