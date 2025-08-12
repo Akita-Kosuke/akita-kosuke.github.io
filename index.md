@@ -22,6 +22,7 @@ By considering tractable data transformation using kernel methods or Koopman ope
 * 統計学
 * 情報科学
 * 機械学習
+* 大阪大学
 
 # E-mail
 

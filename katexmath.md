@@ -6,6 +6,8 @@ tags = ["syntax", "code", "image"]
 
 # 専門数学問題
 
+かつて（2013年～2016年）大阪大学理学部前期日程入試（挑戦枠）で出題された問題（180分・2題）です．
+
 \tableofcontents <!-- you can use \toc as well -->
 
 ## 2016-1
@@ -16,7 +18,8 @@ tags = ["syntax", "code", "image"]
 1. $\alpha$, $\beta$ を $\alpha < \beta$ である実数とするとき，$\alpha < q < \beta$ をみたす有理数 $q$ が存在することを示せ．
 1. $x$ を有理数の定数とする．このとき，不等式$ \left| x - \dfrac{n}{m} \right| < \dfrac{1}{m^2}$ をみたすような自然数 $m$ と整数 $n$ を用いて $\dfrac{n}{m}$ の形に表すことができる有理数は有限個であることを示せ．
 1. 条件式 $a_1 = a_2 = 1$，$a_{n+2} = a_{n+1} + a_n$（$n = 1,2,3,\cdots$）により数列 $\{ a_n \}$ を定め，$x = \dfrac{1 + \sqrt{5}}{2}$ とする．不等式
-$$ \left| x - \frac{a_{n+1}}{a_n} \right| < \frac{1}{a_n^2} \quad (n=1,2,3,\cdots)$$ を示せ．
+   $$ \left| x - \frac{a_{n+1}}{a_n} \right| < \frac{1}{a_n^2} \quad (n=1,2,3,\cdots)$$
+   を示せ．
 
 ## 2016-2
 座標平面において，$x$ 座標と $y$ 座標がともに整数である点を格子点という．
@@ -41,14 +44,12 @@ $$f(x+y) = f(x)+f(y), \quad f(xy)=f(x)f(y), \quad f(1)=1$$
 数列 $\{a_n\}$ を $a_n = \dfrac{n!}{\sqrt{n} n^n e^{-n}}$ で定める．
 
 このとき， $\displaystyle \lim_{n \to \infty} a_n = \sqrt{2 \pi}$ であることを，以下の手順で示せ．
-1. 数列 $\{b_n\}$ を $\dfrac{2^{2n} (n!)^2}{\sqrt{n} (2n)!}$ で定める．$0 < x < 2\pi$ のとき
-\begin{align}
-\sin^{2n+1}x < \sin^{2n}x < \sin^{2n-1}x \quad (n=1,2,3, \cdots)
-\end{align}
-であることを用いて，
+1. 数列 $\{b_n\}$ を $b_n = \dfrac{2^{2n} (n!)^2}{\sqrt{n} (2n)!}$ で定める．$0 < x < \dfrac{\pi}{2}$ のとき
+   $$\sin^{2n+1}x < \sin^{2n}x < \sin^{2n-1}x \quad (n=1,2,3, \cdots)$$
+   であることを用いて，　$\displaystyle \lim_{n \to \infty} b_n = \sqrt{\pi}$ であることを示せ．
 1. すべての自然数 $n$ に対して
-$$ 0 < \log \dfrac{a_n}{a_{n+1}} < \frac{100}{n(n+1)} $$
-が成り立つことを示せ．
+   $$ 0 < \log \dfrac{a_n}{a_{n+1}} < \frac{100}{n(n+1)} $$
+   が成り立つことを示せ．
 1. $\displaystyle \lim_{n \to \infty} \dfrac{a_n}{a_{2n}} = 1$ であることを示せ．
 1. $\displaystyle \lim_{n \to \infty} a_n = \sqrt{2 \pi}$ であることを示せ．
 
@@ -60,14 +61,14 @@ $$ F(x)+C $$
 ## 2014-2
 すべての素数を小さい順に並べた無限数列を $p_1,p_2,...,p_n,...$ とする．
 1. $n$ を自然数とするとき
-$$ \sum_{k=1}^n \frac{1}{k} < \frac{1-(\frac{1}{p_1})^{n+1}}{1-\frac{1}{p_1}} \times \frac{1-(\frac{1}{p_2})^{n+1}}{1-\frac{1}{p_2}} \times \cdots \times \frac{1-(\frac{1}{p_n})^{n+1}}{1-\frac{1}{p_n}} $$
-を証明せよ．
-2. 無限級数
-$$ \sum_{k=1}^\infty \left\{ -\log \left( 1 - \frac{1}{p_k} \right) \right\} $$
-は発散することを証明せよ．
-3. 無限級数
-$$ \sum_{k=1}^\infty \frac{1}{p_k} $$
-は発散することを証明せよ．
+   $$ \sum_{k=1}^n \frac{1}{k} < \frac{1-(\frac{1}{p_1})^{n+1}}{1-\frac{1}{p_1}} \times \frac{1-(\frac{1}{p_2})^{n+1}}{1-\frac{1}{p_2}} \times \cdots \times \frac{1-(\frac{1}{p_n})^{n+1}}{1-\frac{1}{p_n}} $$
+   を証明せよ．
+1. 無限級数
+   $$ \sum_{k=1}^\infty \left\{ -\log \left( 1 - \frac{1}{p_k} \right) \right\} $$
+   は発散することを証明せよ．
+1. 無限級数
+   $$ \sum_{k=1}^\infty \frac{1}{p_k} $$
+   は発散することを証明せよ．
 
 ## 2013-1
 有理数は，整数，有限小数，循環小数のいずれかで表される．これを証明せよ．
