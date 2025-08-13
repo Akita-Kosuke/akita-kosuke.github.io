@@ -16,7 +16,7 @@ tags = ["syntax", "code", "image"]
 
 1. $r$, $s$ を $r < s$ である有理数とするとき，$r < c < s$ をみたす無理数 $c$ が存在することを示せ．
 1. $\alpha$, $\beta$ を $\alpha < \beta$ である実数とするとき，$\alpha < q < \beta$ をみたす有理数 $q$ が存在することを示せ．
-1. $x$ を有理数の定数とする．このとき，不等式$ \left| x - \dfrac{n}{m} \right| < \dfrac{1}{m^2}$ をみたすような自然数 $m$ と整数 $n$ を用いて $\dfrac{n}{m}$ の形に表すことができる有理数は有限個であることを示せ．
+1. $x$ を有理数の定数とする．このとき，不等式 $\left| x - \dfrac{n}{m} \right| < \dfrac{1}{m^2}$ をみたすような自然数 $m$ と整数 $n$ を用いて $\dfrac{n}{m}$ の形に表すことができる有理数は有限個であることを示せ．
 1. 条件式 $a_1 = a_2 = 1$，$a_{n+2} = a_{n+1} + a_n$（$n = 1,2,3,\cdots$）により数列 $\{ a_n \}$ を定め，$x = \dfrac{1 + \sqrt{5}}{2}$ とする．不等式
    $$ \left| x - \frac{a_{n+1}}{a_n} \right| < \frac{1}{a_n^2} \quad (n=1,2,3,\cdots)$$
    を示せ．
@@ -47,11 +47,11 @@ $$f(x+y) = f(x)+f(y), \quad f(xy)=f(x)f(y), \quad f(1)=1$$
 1. 数列 $\{b_n\}$ を $b_n = \dfrac{2^{2n} (n!)^2}{\sqrt{n} (2n)!}$ で定める．$0 < x < \dfrac{\pi}{2}$ のとき
    $$\sin^{2n+1}x < \sin^{2n}x < \sin^{2n-1}x \quad (n=1,2,3, \cdots)$$
    であることを用いて，　$\displaystyle \lim_{n \to \infty} b_n = \sqrt{\pi}$ であることを示せ．
-1. すべての自然数 $n$ に対して
+2. すべての自然数 $n$ に対して
    $$ 0 < \log \dfrac{a_n}{a_{n+1}} < \frac{100}{n(n+1)} $$
    が成り立つことを示せ．
-1. $\displaystyle \lim_{n \to \infty} \dfrac{a_n}{a_{2n}} = 1$ であることを示せ．
-1. $\displaystyle \lim_{n \to \infty} a_n = \sqrt{2 \pi}$ であることを示せ．
+3. $\displaystyle \lim_{n \to \infty} \dfrac{a_n}{a_{2n}} = 1$ であることを示せ．
+4. $\displaystyle \lim_{n \to \infty} a_n = \sqrt{2 \pi}$ であることを示せ．
 
 ## 2014-1
 開区間 $(a,b)$ で定義された関数 $f(x)$ の原始関数の1つを $F(x)$ とするとき，任意の原始関数は定数 $C$ を用いて

@@ -24,6 +24,10 @@ By considering tractable data transformation using kernel methods or Koopman ope
 * 機械学習
 * 大阪大学
 
+## CiNii Research ID（CRID）
+
+https://cir.nii.ac.jp/crid/1410012014701840256
+
 # E-mail
 
 * akita[at]cas.cmc.osaka-u.ac.jp
