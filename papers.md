@@ -1,16 +1,16 @@
 +++
 title = "Papers and  Talks"
-hascode = true
-date = Date(2025, 7, 12)
-rss = "A short description of the page which would serve as **blurb** in a `RSS` feed; you can use basic markdown here but the whole description string must be a single line (not a multiline string). Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don't expect maths or fancy styling to work; images should be ok though: ![](https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg)"
+hascode = false # ← このページにコードブロックがなければfalseに
+date = Date(2025, 7, 12) # ← 最終更新日に合わせる
+rss = "秋田康輔 (Kosuke Akita) の学術論文や学会発表などの研究業績リストです。" # ← 分かりやすい日本語の要約に
 
-tags = ["syntax", "code"]
+tags = ["業績", "数学", "統計"，"論文"，"大阪大学"] # ← 関連性の高い日本語タグに
 +++
 
 
 # Papers
 
-* K. Akita, Y. Miytake, D. Furihta. [Composing a surrogate observation operator for sequential data assimilation](https://www.jstage.jst.go.jp/article/jsiaml/14/0/14_123/_pdf). JSIAM Letters, 14(2022), 123-126.
+* K. Akita, Y. Miytake, D. Furihta. [Composing a surrogate observation operator for sequential data assimilation](https://www.jstage.jst.go.jp/article/jsiaml/14/0/14_123/_article). JSIAM Letters, 14(2022), 123-126.
 
 
 # Talks
@@ -23,7 +23,7 @@ tags = ["syntax", "code"]
 
 * 秋田康輔．[データ同化における状態空間モデルの不確実性について](https://sites.google.com/view/app-math-freshman-seminar-2021/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0?authuser=0#h.bha6b7ibnlk4)．応用数学フレッシュマンセミナー2021，2021年12月6日．
 
-* 秋田康輔，宮武勇登，降籏大介．観測演算子を未知とする条件下での深層学習を用いたデータ同化手法の提案．[数学・数理科学専攻若手研究者のための異分野・異業種研究交流会](https://mathsoc.jp/administration/career/2021/summary_2021.pdf)，2021年11月13日．
+* 秋田康輔，宮武勇登，降籏大介．[観測演算子を未知とする条件下での深層学習を用いたデータ同化手法の提案](https://mathsoc.jp/administration/career/2021/summary_2021.pdf)．数学・数理科学専攻若手研究者のための異分野・異業種研究交流会，2021年11月13日．
 
 * 秋田康輔．[観測演算子を未知とする条件下での深層学習を用いたデータ同化推定とその研究背景](https://sites.google.com/view/da-for-solid-earth?pli=1)．固体地球科学とデータ同化 2021年度第1回勉強会，2021年11月10日．
 

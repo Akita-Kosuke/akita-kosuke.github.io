@@ -1,7 +1,7 @@
 +++
-title = "katex 練習"
+title = "KaTeX 練習"
 hascode = true
-tags = ["syntax", "code", "image"]
+tags = ["大阪大学", "挑戦枠", "理学部"，"数学"]
 +++
 
 # 専門数学問題

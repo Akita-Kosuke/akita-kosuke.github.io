@@ -1,6 +1,8 @@
-@def title = "Kosuke Akita（秋田 康輔）"
-@def tags = ["syntax", "code"]
-
++++
+title = "Kosuke Akita（秋田康輔）"
+date = Date(2025, 8, 14)
+rss = "秋田康輔（Kosuke Akita）の公式ホームページです．This is Akita's page using Franklin."
++++
 
 
 # About me
@@ -26,7 +28,7 @@ By considering tractable data transformation using kernel methods or Koopman ope
 
 ## CiNii Research ID（CRID）
 
-https://cir.nii.ac.jp/crid/1410012014701840256
+[https://cir.nii.ac.jp/crid/1410012014701840256](https://cir.nii.ac.jp/crid/1410012014701840256)
 
 # E-mail
 
