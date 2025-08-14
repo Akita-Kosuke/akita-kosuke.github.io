@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  
+   <link rel="stylesheet" href="/libs/highlight/styles/github.min.css">
+   
 
   <link href="/css/franklin.css" rel="stylesheet">
 <link href="/css/vela.css" rel="stylesheet">
@@ -55,31 +56,24 @@
       <div class="hamburger-inner"></div>
     </div>
   </div>
-  <h1 class="page title">Others</h1>
+  <h1 class="page title">Julia による Pysics Informed Koopman Network の実装</h1>
   <hr>
 
 
 
 <!-- Content appended here -->
 <div class="franklin-content">
-<h1 id="awards受賞歴"><a href="#awards受賞歴" class="header-anchor">Awards（受賞歴）</a></h1>
-<ul>
-<li><p>日本応用数理学会　<a href="https://jsiam.org/award/poster_award/poster_award2021/#:~:text&#61;&#37;E7&#37;A9&#37;BA&#37;E9&#37;96&#37;93&#37;E3&#37;81&#37;AE&#37;E8&#37;BF&#37;91&#37;E4&#37;BC&#37;BC-,&#37;E5&#37;84&#37;AA&#37;E7&#37;A7&#37;80&#37;E3&#37;83&#37;9D&#37;E3&#37;82&#37;B9&#37;E3&#37;82&#37;BF&#37;E3&#37;83&#37;BC&#37;E8&#37;B3&#37;9E&#37;EF&#37;BC&#37;881&#37;E4&#37;BB&#37;B6&#37;EF&#37;BC&#37;89,-&#37;E5&#37;8F&#37;97&#37;E8&#37;B3&#37;9E&#37;E8&#37;80&#37;85">優秀ポスター賞</a>（2021年9月8日）</p>
-</li>
-</ul>
-<h1 id="保有資格スコア"><a href="#保有資格スコア" class="header-anchor">保有資格・スコア</a></h1>
-<ul>
-<li><p>TOEIC score：675（2023年）</p>
-</li>
-<li><p>中学校教諭専修免許状（数学）</p>
-</li>
-<li><p>高等学校教諭専修免許状（数学）</p>
-</li>
-<li><p>高等学校教諭一種免許状（情報）</p>
-</li>
-</ul>
+<h1 id="はじめに準備"><a href="#はじめに準備" class="header-anchor">はじめに（準備）</a></h1>
+<h2 id="数学的準備"><a href="#数学的準備" class="header-anchor">数学的準備</a></h2>
+<p>以下の問題を考える．</p>
+<h2 id="使用パッケージ"><a href="#使用パッケージ" class="header-anchor">使用パッケージ</a></h2>
+<pre><code class="language-julia-repl">julia&gt; using LinearAlgebra
+julia&gt; using Plots
+julia&gt; using ReverseDiff # Zygoteは用いない
+julia&gt; using Optimisers</code></pre>
+<h1 id="参考文献"><a href="#参考文献" class="header-anchor">参考文献</a></h1>
 <div class="page-foot">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Kosuke Akita. Last modified: August 10, 2025.
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Kosuke Akita. Last modified: August 14, 2025.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -87,6 +81,10 @@
   <script src="/libs/vela/metisMenu.min.js"></script>
   <script src="/libs/vela/slideout.min.js"></script>
   
+  
+    <script src="/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();hljs.configure({tabReplace: '    '});</script>
+
   
 </body>
 </html>

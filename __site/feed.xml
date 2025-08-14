@@ -23,12 +23,31 @@
 
 <item>
   <title>
+    <![CDATA[  Kosuke Akita（秋田康輔）  ]]>
+  </title>
+  <link> https://akita-kosuke.github.io/index.html </link>
+  <guid> https://akita-kosuke.github.io/index.html </guid>
+  <description>
+    <![CDATA[  秋田康輔（Kosuke Akita）の公式ホームページです．This is Akita&#39;s page using Franklin.  ]]>
+  </description>  
+    
+  <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kosuke Akita（秋田康輔）</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Papers and  Talks  ]]>
   </title>
   <link> https://akita-kosuke.github.io/papers/index.html </link>
   <guid> https://akita-kosuke.github.io/papers/index.html </guid>
   <description>
-    <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg" alt="" />  ]]>
+    <![CDATA[  秋田康輔 &#40;Kosuke Akita&#41; の学術論文や学会発表などの研究業績リストです。  ]]>
   </description>  
     
   <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>  
@@ -65,25 +84,6 @@
   </title>
   <link> https://akita-kosuke.github.io/menu2/index.html </link>
   <guid> https://akita-kosuke.github.io/menu2/index.html </guid>
-  <description>
-    <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg" alt="" />  ]]>
-  </description>  
-    
-  <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Kosuke Akita（秋田康輔）</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  More goodies  ]]>
-  </title>
-  <link> https://akita-kosuke.github.io/menu21/index.html </link>
-  <guid> https://akita-kosuke.github.io/menu21/index.html </guid>
   <description>
     <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg" alt="" />  ]]>
   </description>  
