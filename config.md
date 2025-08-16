@@ -2,7 +2,6 @@
 Add here global page variables to use throughout your website.
 -->
 @def prettyurls = true
-@def sitemap_exclude = ["google99f26b157d2cc0de.html"]
 +++
 author = "Kosuke Akita（秋田康輔）"
 mintoclevel = 2
@@ -15,8 +14,10 @@ mintoclevel = 2
 # these files might be copied and, if markdown, processed by Franklin which
 # you might not want. Indicate directories by ending the name with a `/`.
 # Base files such as LICENSE.md and README.md are ignored by default.
-ignore = ["node_modules/"]
+
+ignore = ["node_modules/", "google99f26b157d2cc0de.html"]
 keep_path = ["google99f26b157d2cc0de.html", "robots.txt"]
+
 
 # RSS (the website_{title, descr, url} must be defined to get RSS)
 generate_rss = true
