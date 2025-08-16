@@ -39,23 +39,4 @@
   </atom:author>
         
 </item>
-
-<item>
-  <title>
-    <![CDATA[  Papers and  Talks  ]]>
-  </title>
-  <link> https://akita-kosuke.github.io/papers/index.html </link>
-  <guid> https://akita-kosuke.github.io/papers/index.html </guid>
-  <description>
-    <![CDATA[  秋田康輔 &#40;Kosuke Akita&#41; の学術論文や学会発表などの研究業績リストです。  ]]>
-  </description>  
-    
-  <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Kosuke Akita（秋田康輔）</atom:name>
-  </atom:author>
-        
-</item>
 </channel></rss>
