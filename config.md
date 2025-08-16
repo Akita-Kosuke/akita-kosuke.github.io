@@ -2,6 +2,7 @@
 Add here global page variables to use throughout your website.
 -->
 @def prettyurls = true
+@def sitemap_exclude = ["google99f26b157d2cc0de.html"]
 +++
 author = "Kosuke Akita（秋田康輔）"
 mintoclevel = 2

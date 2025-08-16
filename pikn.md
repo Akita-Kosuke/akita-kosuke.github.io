@@ -1,5 +1,5 @@
 +++
-title = "Julia による Pysics Informed Koopman Network の実装"
+title = "Julia による Physics Informed Koopman Network"
 hascode = true
 rss = ""
 rss_title = "PIKN"
@@ -14,6 +14,9 @@ tags = ["syntax", "code", "image"]
 
 以下の問題を考える．
 
+\begin{align}
+\frac{d}{dt} \bm{x}(t) = \bm{f}(\bm{x}(t))
+\end{align}
 
 ## 使用パッケージ
 

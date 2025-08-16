@@ -63,10 +63,10 @@ $$ F(x)+C $$
 1. $n$ を自然数とするとき
    $$ \sum_{k=1}^n \frac{1}{k} < \frac{1-(\frac{1}{p_1})^{n+1}}{1-\frac{1}{p_1}} \times \frac{1-(\frac{1}{p_2})^{n+1}}{1-\frac{1}{p_2}} \times \cdots \times \frac{1-(\frac{1}{p_n})^{n+1}}{1-\frac{1}{p_n}} $$
    を証明せよ．
-1. 無限級数
+2. 無限級数
    $$ \sum_{k=1}^\infty \left\{ -\log \left( 1 - \frac{1}{p_k} \right) \right\} $$
    は発散することを証明せよ．
-1. 無限級数
+3. 無限級数
    $$ \sum_{k=1}^\infty \frac{1}{p_k} $$
    は発散することを証明せよ．
 
