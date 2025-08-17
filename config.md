@@ -15,8 +15,8 @@ mintoclevel = 2
 # you might not want. Indicate directories by ending the name with a `/`.
 # Base files such as LICENSE.md and README.md are ignored by default.
 
-ignore = ["node_modules/", "google99f26b157d2cc0de.html"]
-keep_path = ["google99f26b157d2cc0de.html", "robots.txt"]
+ignore = ["node_modules/"]
+keep_path = ["google99f26b157d2cc0de.html", "robots.txt","sitemap2.xml"]
 
 
 # RSS (the website_{title, descr, url} must be defined to get RSS)

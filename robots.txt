@@ -1,4 +1,4 @@
-Sitemap: https://akita-kosuke.github.io/sitemap.xml
+Sitemap: https://akita-kosuke.github.io/sitemap2.xml
 
 User-agent: *
 Disallow:
