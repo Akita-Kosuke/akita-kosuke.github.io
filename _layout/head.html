@@ -9,7 +9,8 @@
 
   {{insert style.html}}
 
-  <title>Kosuke Akita（秋田 康輔）</title>
+  <title>{{fill title}}</title>  <!-- ★修正点1: タイトルを動的に -->
+  <link rel="canonical" href="{{get_url}}"> <!-- ★修正点2: Canonicalタグを追加 -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-71R5Z6V5CM"></script>
