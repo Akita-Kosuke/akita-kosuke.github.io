@@ -1,5 +1,5 @@
 +++
-title = "Kosuke Akita（秋田康輔）"
+title = "Kosuke Akita（秋田 康輔）"
 date = Date(2025, 8, 19)
 rss = "秋田康輔（Kosuke Akita）の公式ホームページです．This is Akita's page using Franklin."
 tags = ["秋田康輔", "ホームページ", "データ同化", "大阪大学", "Kosuke", "Akita", "data assimilation"]

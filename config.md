@@ -3,7 +3,7 @@ Add here global page variables to use throughout your website.
 -->
 @def prettyurls = true
 +++
-author = "Kosuke Akita（秋田康輔）"
+author = "Kosuke Akita（秋田 康輔）"
 mintoclevel = 2
 
 # uncomment and adjust the following line if the expected base URL of your website is something like [www.thebase.com/yourproject/]
