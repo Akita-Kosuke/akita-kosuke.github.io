@@ -24,6 +24,7 @@ By considering tractable data transformation using kernel methods or Koopman ope
 * 応用数学
 * 統計学
 * 情報科学
+* 量子力学
 * 機械学習
 * 大阪大学
 
