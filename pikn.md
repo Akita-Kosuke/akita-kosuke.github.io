@@ -43,7 +43,7 @@ julia> using Optimisers
 
 \begin{align}
 \frac{dx_1}{dt}& = \mu x_1 \\
-\frac{dx_2}{dt}& = \lambfa (x_2 - x_1^2)
+\frac{dx_2}{dt}& = \lambda (x_2 - x_1^2)
 \end{align}
 
 に対して適用を試みる．ただし，$\mu = -0.1$，$\lambda = -1$ と設定する．

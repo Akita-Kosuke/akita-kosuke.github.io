@@ -71,7 +71,7 @@
 \[\begin{aligned}
 \frac{d}{dt} \bm{x}(t) = \bm{f}(\bm{x}(t))
 \end{aligned}\]
-<p>に対して，シミュレーション\(\bm{F}: \mathbb{R}^k \righarrow \mathbb{R}\k \) を用いて，</p>
+<p>に対して，シミュレーション\(\bm{F}: \mathbb{R}^k \rightarrow \mathbb{R}^k \) を用いて，</p>
 \[\begin{aligned}
 \bm{x}_t = \bm{F}(\bm{x}_{t-1})
 \end{aligned}\]
@@ -89,15 +89,15 @@ julia&gt; using Optimisers</code></pre>
 \end{aligned}\]
 <p>に対して適用を試みる．ただし，\(\mu = -0.1\)，\(\lambda = -1\) と設定する．</p>
 <pre><code class="language-julia-repl"># --- 1. システムダイナミクスの定義 &#40;変更なし&#41; ---
-julia&gt;const μ &#61; -0.1f0
-julia&gt;const λ &#61; -1.0f0
+const μ &#61; -0.1f0
+const λ &#61; -1.0f0
 
 function simple&#40;x&#41;
     dx1 &#61; μ * x&#91;1&#93;
     dx2 &#61; λ * &#40;x&#91;2&#93; - x&#91;1&#93;^2&#41;
     return &#91;dx1, dx2&#93;
 end</code></pre>
-<p>次に，ニューラルネットを構成する．2層の FNN を用いることにし，</p>
+<p>次に，ニューラルネットを構成する．</p>
 <pre><code class="language-julia-repl"># --- 2. モデルの定義 &#40;変更なし&#41; ---
 encoder &#61; Chain&#40;
     Dense&#40;2 &#61;&gt; 50, elu&#41;,
