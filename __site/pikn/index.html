@@ -67,18 +67,52 @@
 <div class="franklin-content">
 <h1 id="はじめに準備"><a href="#はじめに準備" class="header-anchor">はじめに（準備）</a></h1>
 <h2 id="数学的準備"><a href="#数学的準備" class="header-anchor">数学的準備</a></h2>
-<p>以下の問題を考える．</p>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right" columnspacing=""><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi mathvariant="bold-italic">x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="bold-italic">f</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+<p>以下の常微分方程式</p>
+\[\begin{aligned}
 \frac{d}{dt} \bm{x}(t) = \bm{f}(\bm{x}(t))
-\end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.3574em;vertical-align:-0.9287em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4287em;"><span style="top:-3.4287em;"><span class="pstrut" style="height:3.3714em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord"><span class="mord boldsymbol">x</span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol" style="margin-right:0.11042em;">f</span></span></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord boldsymbol">x</span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">))</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9287em;"><span></span></span></span></span></span></span></span></span></span></span></span>
+\end{aligned}\]
+<p>に対して，シミュレーション\(\bm{F}: \mathbb{R}^k \righarrow \mathbb{R}\k \) を用いて，</p>
+\[\begin{aligned}
+\bm{x}_t = \bm{F}(\bm{x}_{t-1})
+\end{aligned}\]
+<p>による時間発展の記述を考える．</p>
 <h2 id="使用パッケージ"><a href="#使用パッケージ" class="header-anchor">使用パッケージ</a></h2>
 <pre><code class="language-julia-repl">julia&gt; using LinearAlgebra
 julia&gt; using Plots
 julia&gt; using ReverseDiff # Zygoteは用いない
 julia&gt; using Optimisers</code></pre>
+<h1 id="数値実験"><a href="#数値実験" class="header-anchor">数値実験</a></h1>
+<p>ここでは，簡単に以下の連立常微分方程式</p>
+\[\begin{aligned}
+\frac{dx_1}{dt}& = \mu x_1 \\
+\frac{dx_2}{dt}& = \lambfa (x_2 - x_1^2)
+\end{aligned}\]
+<p>に対して適用を試みる．ただし，\(\mu = -0.1\)，\(\lambda = -1\) と設定する．</p>
+<pre><code class="language-julia-repl"># --- 1. システムダイナミクスの定義 &#40;変更なし&#41; ---
+julia&gt;const μ &#61; -0.1f0
+julia&gt;const λ &#61; -1.0f0
+
+function simple&#40;x&#41;
+    dx1 &#61; μ * x&#91;1&#93;
+    dx2 &#61; λ * &#40;x&#91;2&#93; - x&#91;1&#93;^2&#41;
+    return &#91;dx1, dx2&#93;
+end</code></pre>
+<p>次に，ニューラルネットを構成する．2層の FNN を用いることにし，</p>
+<pre><code class="language-julia-repl"># --- 2. モデルの定義 &#40;変更なし&#41; ---
+encoder &#61; Chain&#40;
+    Dense&#40;2 &#61;&gt; 50, elu&#41;,
+    Dense&#40;50 &#61;&gt; 50, elu&#41;,
+    Dense&#40;50 &#61;&gt; 3&#41;
+&#41;
+decoder &#61; Dense&#40;3 &#61;&gt; 2; bias&#61;false&#41;
+L &#61; 2*rand&#40;Float32, 3, 3&#41; .- 1.0f0
+
+# 学習対象のパラメータを一つのNamedTupleにまとめる
+# ReverseDiffは、パラメータを平坦な一つのベクトルとして扱う必要がある
+p_initial, re &#61; Flux.destructure&#40;&#40;encoder&#61;encoder, decoder&#61;decoder, L&#61;L&#41;&#41;</code></pre>
 <h1 id="参考文献"><a href="#参考文献" class="header-anchor">参考文献</a></h1>
 <div class="page-foot">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Kosuke Akita. Last modified: August 16, 2025.
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Kosuke Akita.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -86,9 +120,9 @@ julia&gt; using Optimisers</code></pre>
   <script src="/libs/vela/metisMenu.min.js"></script>
   <script src="/libs/vela/slideout.min.js"></script>
   
-    
-
-
+    <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/contrib/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
 
   
   

@@ -18,7 +18,7 @@ tags = ["syntax", "code", "image"]
 \frac{d}{dt} \bm{x}(t) = \bm{f}(\bm{x}(t))
 \end{align}
 
-に対して，シミュレーション$\bm{F}: \mathbb{R}^k \righarrow \mathbb{R}\k $ を用いて，
+に対して，シミュレーション$\bm{F}: \mathbb{R}^k \rightarrow \mathbb{R}^k $ を用いて，
 
 \begin{align}
 \bm{x}_t = \bm{F}(\bm{x}_{t-1})
@@ -50,8 +50,8 @@ julia> using Optimisers
 
 ```julia-repl
 # --- 1. システムダイナミクスの定義 (変更なし) ---
-julia>const μ = -0.1f0
-julia>const λ = -1.0f0
+const μ = -0.1f0
+const λ = -1.0f0
 
 function simple(x)
     dx1 = μ * x[1]
@@ -61,7 +61,7 @@ end
 
 ```
 
-次に，ニューラルネットを構成する．2層の FNN を用いることにし，
+次に，ニューラルネットを構成する．
 
 ```julia-repl
 # --- 2. モデルの定義 (変更なし) ---
