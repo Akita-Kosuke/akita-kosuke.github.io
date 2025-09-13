@@ -23,7 +23,7 @@ keep_path = ["google99f26b157d2cc0de.html", "robots.txt","sitemap.xml"]
 # RSS (the website_{title, descr, url} must be defined to get RSS)
 generate_rss = true
 website_title = "Kosuke Akita（秋田 康輔）"
-website_descr = "秋田康輔 (Kosuke Akita) のウェブサイトです．"
+website_descr = "秋田康輔 （Kosuke Akita）のウェブサイトです．"
 website_url   = "https://akita-kosuke.github.io/"
 +++
 

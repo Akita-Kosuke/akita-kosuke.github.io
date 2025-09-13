@@ -1,6 +1,6 @@
 +++
 title = "Others"
-tags = ["業績", "英語", "TOEIC"]
+tags = ["業績"]
 +++
 
 # Awards（受賞歴）
