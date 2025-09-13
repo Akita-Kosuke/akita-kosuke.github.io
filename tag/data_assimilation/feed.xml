@@ -13,7 +13,7 @@
     </title>
     <link> https://akita-kosuke.github.io/ </link>
     <description>
-      <![CDATA[  秋田康輔 &#40;Kosuke Akita&#41; のウェブサイトです．  ]]>
+      <![CDATA[  秋田康輔 （Kosuke Akita）のウェブサイトです．  ]]>
     </description>
     <atom:link
       href="https://akita-kosuke.github.io/feed.xml"
@@ -28,10 +28,10 @@
   <link> https://akita-kosuke.github.io/index.html </link>
   <guid> https://akita-kosuke.github.io/index.html </guid>
   <description>
-    <![CDATA[  秋田康輔（Kosuke Akita）の公式ホームページです．This is Akita&#39;s page using Franklin.  ]]>
+    <![CDATA[  This is Akita page using Franklin.  ]]>
   </description>  
     
-  <pubDate>Tue, 19 Aug 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
