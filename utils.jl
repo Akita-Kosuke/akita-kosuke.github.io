@@ -14,3 +14,15 @@ function lx_baz(com, _)
   # do whatever you want here
   return uppercase(brace_content)
 end
+
+# --- ここから追加 ---
+"""
+    {{strip_index url}}
+
+Helper function to remove `index.html` from a URL.
+"""
+function hfun_strip_index(vname)
+  url = vname[1]
+  return replace(url, "index.html" => "")
+end
+# --- ここまで追加 ---
