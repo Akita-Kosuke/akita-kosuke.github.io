@@ -9,9 +9,9 @@
       <item>
         <title><![CDATA[ {{post.title}} ]]></title>
         
-        <!-- ★★★ ここが最重要の修正点 ★★★ -->
-        <link>{{website_url}}{{post.link}}</link>
-        <guid>{{website_url}}{{post.link}}</guid>
+        <!-- ★★★ ここが最終修正点 ★★★ -->
+        <link>{{replace website_url * post.link "index.html" => ""}}</link>
+        <guid>{{replace website_url * post.link "index.html" => ""}}</guid>
         
         <description><![CDATA[ {{post.description}} ]]></description>
         <pubDate>{{post.date}}</pubDate>
