@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  Kosuke Akita（秋田 康輔）  ]]>
+    </title>
+    <link> https://akita-kosuke.github.io/ </link>
+    <description>
+      <![CDATA[  秋田康輔 （Kosuke Akita）のウェブサイトです．  ]]>
+    </description>
+    <atom:link
+      href="https://akita-kosuke.github.io/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  Papers and  Talks  ]]>
+  </title>
+  <link> https://akita-kosuke.github.io/papers/index.html </link>
+  <guid> https://akita-kosuke.github.io/papers/index.html </guid>
+  <description>
+    <![CDATA[  秋田康輔 &#40;Kosuke Akita&#41; の学術論文や学会発表などの研究業績リストです。  ]]>
+  </description>  
+    
+  <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kosuke Akita（秋田 康輔）</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>
