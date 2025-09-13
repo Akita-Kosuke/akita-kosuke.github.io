@@ -26,3 +26,10 @@ function hfun_strip_index(vname)
   return replace(url, "index.html" => "")
 end
 # --- ここまで追加 ---
+
+# --- デバッグ用のスパイ関数 ---
+function hfun_spy(vname)
+  var = vname[1]
+  println("🕵️ SPY: ", var) # 受け取った値をターミナルに表示
+  return var             # 受け取った値をそのまま返す
+end

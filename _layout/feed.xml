@@ -9,8 +9,8 @@
       <item>
         <title><![CDATA[ {{post.title}} ]]></title>
         
-        <link>{{website_url}}{{strip_index post.link}}</link>
-        <guid>{{website_url}}{{strip_index post.link}}</guid>
+        <link>{{website_url}}{{spy post.link}}</link>
+        <guid>{{website_url}}{{spy post.link}}</guid>
         
         <description><![CDATA[ {{post.description}} ]]></description>
         <pubDate>{{post.date}}</pubDate>
