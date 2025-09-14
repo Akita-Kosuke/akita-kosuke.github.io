@@ -14,22 +14,3 @@ function lx_baz(com, _)
   # do whatever you want here
   return uppercase(brace_content)
 end
-
-# --- ここから追加 ---
-"""
-    {{strip_index url}}
-
-Helper function to remove `index.html` from a URL.
-"""
-function hfun_strip_index(vname)
-  url = vname[1]
-  return replace(url, "index.html" => "")
-end
-# --- ここまで追加 ---
-
-# --- デバッグ用のスパイ関数 ---
-function hfun_spy(vname)
-  var = vname[1]
-  println("🕵️ SPY: ", var) # 受け取った値をターミナルに表示
-  return var             # 受け取った値をそのまま返す
-end

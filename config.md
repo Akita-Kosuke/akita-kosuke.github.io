@@ -5,7 +5,7 @@ Add here global page variables to use throughout your website.
 +++
 author = "Kosuke Akita（秋田 康輔）"
 mintoclevel = 2
-generate_sitemap = false
+generate_sitemap = true
 
 # uncomment and adjust the following line if the expected base URL of your website is something like [www.thebase.com/yourproject/]
 # please do read the docs on deployment to avoid common issues: https://franklinjl.org/workflow/deploy/#deploying_your_website
@@ -17,7 +17,7 @@ generate_sitemap = false
 # Base files such as LICENSE.md and README.md are ignored by default.
 
 ignore = ["node_modules/"]
-keep_path = ["google99f26b157d2cc0de.html", "robots.txt","sitemap.xml"]
+keep_path = ["google99f26b157d2cc0de.html", "robots.txt"]
 
 
 # RSS (the website_{title, descr, url} must be defined to get RSS)
