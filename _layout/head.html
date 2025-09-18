@@ -10,8 +10,7 @@
   {{insert style.html}}
 
   <title>{{fill title}}</title>  <!-- ★修正点1: タイトルを動的に -->
-  <link rel="canonical" href="{{fd_full_url}}"> <!-- ★修正点2: Canonicalタグを追加 -->
-
+  <link rel="canonical" href="{{strip_index fd_full_url}}">
   <!-- ★ここから追加 -->
   <script type="application/ld+json">
   {
