@@ -1,5 +1,5 @@
 +++
-title = "Julia による Physics Informed Koopman Network"
+title = "Julia による実装"
 hascode = true
 rss = ""
 rss_title = "PIKN"
