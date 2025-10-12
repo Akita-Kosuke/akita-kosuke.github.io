@@ -27,10 +27,12 @@ for (root, dirs, files) in walkdir(site_dir)
             content = read(filepath, String)
 
             # "index.html" を削除する
-            corrected_content = replace(content, "index.html" => "")
+            corrected_content1 = replace(content, "\index.html" => "/")
+            corrected_content2 = replace(corrected_content1, "index.html" => "")
+
 
             # 修正した内容でファイルを上書きする
-            write(filepath, corrected_content)
+            write(filepath, corrected_content2)
         end
     end
 end
