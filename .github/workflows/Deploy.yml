@@ -17,9 +17,7 @@ jobs:
         with:
           version: '1'
 
-      # --- ここが修正点です ---
       - name: Install dependencies
-        # Pkg.instantiate() の代わりに Pkg.add() を明示的に実行します
         run: julia -e 'using Pkg; Pkg.add("Franklin"); Pkg.add("NodeJS")'
       
       - name: Build and Deploy 🚀
@@ -33,7 +31,11 @@ jobs:
           julia -e '
             using Franklin
             using NodeJS
-            optimize(clear=true, sitemap=true, feed=true)
+            
+            # --- ここが修正点です ---
+            # sitemap=true と feed=true のオプションを削除します
+            optimize(clear=true)
+            
             deploy(
               gh_repo="git@github.com:Akita-Kosuke/akita-kosuke.github.io.git",
               branch="master",
