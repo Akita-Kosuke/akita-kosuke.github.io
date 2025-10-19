@@ -3,51 +3,40 @@ name: Build and Deploy Franklin Site
 on:
   push:
     branches:
-      - source  # ★トリガーは "source" ブランチです
+      - source
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. ソースコード(sourceブランチ)をチェックアウト
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      # 2. Juliaをセットアップ
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
           version: '1'
 
-      # 3. 依存パッケージ(FranklinとNodeJS)をインストール
-      # Project.toml に基づいてインストールします
+      # --- ここが修正点です ---
       - name: Install dependencies
-        run: julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate()'
+        # Pkg.instantiate() の代わりに Pkg.add() を明示的に実行します
+        run: julia -e 'using Pkg; Pkg.add("Franklin"); Pkg.add("NodeJS")'
       
-      # 4. ビルドとデプロイを実行
       - name: Build and Deploy 🚀
         env:
-          # ★ステップ4で設定した秘密鍵(合鍵)を使います
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }} 
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
-          # SSHキーをセットアップ
           mkdir -p ~/.ssh
           echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-          # Franklin.jl のビルドとデプロイ関数を実行
           julia -e '
             using Franklin
             using NodeJS
-            
-            # ビルド実行 (ここでクリーンな sitemap.xml が作られます)
             optimize(clear=true, sitemap=true, feed=true)
-            
-            # ★"master" ブランチにデプロイします
             deploy(
               gh_repo="git@github.com:Akita-Kosuke/akita-kosuke.github.io.git",
-              branch="master", 
+              branch="master",
               ssh=true
             )
           '
