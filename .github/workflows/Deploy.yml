@@ -3,47 +3,40 @@ name: Build and Deploy Franklin Site
 on:
   push:
     branches:
-      - source
+      - source  # "source" ブランチにプッシュされた時に実行
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1. ソースコード(sourceブランチ)をチェックアウト
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      # 2. Juliaをセットアップ
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
           version: '1'
 
-      # --- 修正点 1 ---
-      # Franklin の "v1" 系を指定してインストールします
+      # 3. 依存パッケージ(FranklinとNodeJS)をインストール
       - name: Install dependencies
-        run: julia -e 'using Pkg; Pkg.add(Pkg.PackageSpec(name="Franklin", version="1")); Pkg.add("NodeJS")'
+        run: julia -e 'using Pkg; Pkg.add("Franklin"); Pkg.add("NodeJS")'
       
+      # 4. highlight.js をインストール (警告を消すため)
       - name: Install highlight.js 💡
         run: julia -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
 
-      - name: Build and Deploy 🚀
-        env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          julia -e '
-            using Franklin
-            using NodeJS
-            
-            Franklin.optimize(clear=true)
-            
-            # --- 修正点 2 ---
-            # 関数名を "deploy" に戻します (v1系ではこちらが推奨)
-            Franklin.deploy(
-              gh_repo="git@github.com:Akita-Kosuke/akita-kosuke.github.io.git",
-              branch="master",
-              ssh=true
-            )
-          '
+      # 5. サイトをビルド
+      # (deploy や publish は呼び出さず、ビルドに専念する)
+      - name: Build site 🔨
+        run: julia -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
+
+      # 6. __site フォルダを master ブランチにデプロイ
+      # (SSHキーの代わりに、信頼性の高い専用アクションを使用)
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: master  # akita-kosuke.github.io の公開ブランチ
+          folder: __site   # デプロイするフォルダ
+          token: ${{ secrets.GITHUB_TOKEN }} # 自動で付与される権限 (SSHキー不要)
