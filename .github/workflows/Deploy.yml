@@ -20,6 +20,10 @@ jobs:
       - name: Install dependencies
         run: julia -e 'using Pkg; Pkg.add("Franklin"); Pkg.add("NodeJS")'
       
+      # 追加：highlight.js をインストールして警告を消します
+      - name: Install highlight.js 💡
+        run: julia -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
+
       - name: Build and Deploy 🚀
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
@@ -32,11 +36,10 @@ jobs:
             using Franklin
             using NodeJS
             
-            # --- ここが修正点です ---
-            # sitemap=true と feed=true のオプションを削除します
-            optimize(clear=true)
+            # 修正点：Franklin.optimize, Franklin.deploy のように呼び出します
+            Franklin.optimize(clear=true)
             
-            deploy(
+            Franklin.deploy(
               gh_repo="git@github.com:Akita-Kosuke/akita-kosuke.github.io.git",
               branch="master",
               ssh=true
