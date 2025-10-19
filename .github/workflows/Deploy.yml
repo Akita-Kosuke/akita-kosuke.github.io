@@ -3,11 +3,17 @@ name: Build and Deploy Franklin Site
 on:
   push:
     branches:
-      - source  # "source" ブランチにプッシュされた時に実行
+      - source
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    
+    # --- ここが修正点です ---
+    # このジョブに "contents" (リポジトリ内容) への "write" (書き込み) 権限を与えます
+    permissions:
+      contents: write
+
     steps:
       # 1. ソースコード(sourceブランチ)をチェックアウト
       - name: Checkout 🛎️
@@ -28,15 +34,13 @@ jobs:
         run: julia -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
 
       # 5. サイトをビルド
-      # (deploy や publish は呼び出さず、ビルドに専念する)
       - name: Build site 🔨
         run: julia -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
       # 6. __site フォルダを master ブランチにデプロイ
-      # (SSHキーの代わりに、信頼性の高い専用アクションを使用)
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: master  # akita-kosuke.github.io の公開ブランチ
-          folder: __site   # デプロイするフォルダ
-          token: ${{ secrets.GITHUB_TOKEN }} # 自動で付与される権限 (SSHキー不要)
+          branch: master
+          folder: __site
+          token: ${{ secrets.GITHUB_TOKEN }}
