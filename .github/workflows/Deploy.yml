@@ -17,8 +17,10 @@ jobs:
         with:
           version: '1'
 
+      # --- 修正点 1 ---
+      # Franklin の "v1" 系を指定してインストールします
       - name: Install dependencies
-        run: julia -e 'using Pkg; Pkg.add("Franklin"); Pkg.add("NodeJS")'
+        run: julia -e 'using Pkg; Pkg.add(Pkg.PackageSpec(name="Franklin", version="1")); Pkg.add("NodeJS")'
       
       - name: Install highlight.js 💡
         run: julia -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
@@ -37,9 +39,9 @@ jobs:
             
             Franklin.optimize(clear=true)
             
-            # --- ここが修正点です ---
-            # "deploy" を "publish" に変更します
-            Franklin.publish(
+            # --- 修正点 2 ---
+            # 関数名を "deploy" に戻します (v1系ではこちらが推奨)
+            Franklin.deploy(
               gh_repo="git@github.com:Akita-Kosuke/akita-kosuke.github.io.git",
               branch="master",
               ssh=true
