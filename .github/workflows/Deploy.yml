@@ -20,9 +20,9 @@ jobs:
         with:
           version: '1.10' # 安定版 '1.10' を使用
 
-      # --- 修正点 1 (より確実なインストール) ---
+      # --- ここが修正点です (up=true を削除) ---
       - name: Install dependencies
-        run: julia --project -e 'using Pkg; Pkg.instantiate(up=true)'
+        run: julia --project -e 'using Pkg; Pkg.instantiate()'
       
       - name: Install highlight.js 💡
         run: julia --project -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
@@ -30,7 +30,7 @@ jobs:
       - name: Build site 🔨
         run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
-      # --- 修正点 2 ( .html を \.html に修正) ---
+      # sed コマンドは前回の修正（\.html）のままです
       - name: Edit sitemap.xml 📝
         run: |
           sed -i 's|<url> *<loc>https://akita-kosuke.github.io/google99f26b157d2cc0de\.html</loc> *<lastmod>[^<]*</lastmod> *<changefreq>[^<]*</changefreq> *<priority>[^<]*</priority></url>||g' __site/sitemap.xml
