@@ -18,7 +18,7 @@ jobs:
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
-          version: '1.10' # 安定版 '1.10' を使用
+          version: '1.10'
 
       - name: Install dependencies
         run: julia --project -e 'using Pkg; Pkg.instantiate()'
@@ -27,14 +27,14 @@ jobs:
         run: julia --project -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
 
       # --- 修正点 1 ---
-      # optimize に prettyurls=true を追加し、index.html を削除
+      # 'prettyurls=true' と 'sitemap=true' を両方指定します
+      # これにより noindex ヘッダーが付かなくなるはずです
       - name: Build site 🔨
-        run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true, prettyurls=true)'
+        run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true, prettyurls=true, sitemap=true)'
 
       # --- 修正点 2 ---
-      # 不要になった sed と cat (デバッグ用) のステップを全て削除
-
-      # 認証ファイルをコピー (これは必要)
+      # 不要になった 'Edit sitemap.xml' ステップを削除します
+      
       - name: Copy verification file 🔑
         run: cp google99f26b157d2cc0de.html __site/
 
