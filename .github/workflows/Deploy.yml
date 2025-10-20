@@ -15,32 +15,29 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      # --- ここが修正点です ---
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
-          version: '1'
+          version: '1.10' # 最新版('1')の代わりに、安定版('1.10')を指定
 
+      # --- これ以降のステップは変更ありません ---
       - name: Install dependencies
         run: julia --project -e 'using Pkg; Pkg.instantiate()'
       
       - name: Install highlight.js 💡
         run: julia --project -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
 
-      # 5. サイトをビルド (ここで不完全な sitemap.xml が生成される)
       - name: Build site 🔨
         run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
-      # --- 以下の4行をここに追加してください ---
-      # 6. sitemap.xml を編集 (バグを強制修正)
       - name: Edit sitemap.xml 📝
         run: |
           sed -i 's|<url> *<loc>https://akita-kosuke.github.io/google99f26b157d2cc0de.html</loc> *<lastmod>[^<]*</lastmod> *<changefreq>[^<]*</changefreq> *<priority>[^<]*</priority></url>||g' __site/sitemap.xml
 
-      # 7. 認証ファイルをコピー (これは前回のステップと同じ)
       - name: Copy verification file 🔑
         run: cp google99f26b157d2cc0de.html __site/
 
-      # 8. デプロイ
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
