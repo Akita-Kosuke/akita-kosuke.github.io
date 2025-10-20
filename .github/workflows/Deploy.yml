@@ -27,14 +27,19 @@ jobs:
         run: julia --project -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
 
       # --- 修正点 1 ---
-      # 'prettyurls=true' と 'sitemap=true' を両方指定します
-      # これにより noindex ヘッダーが付かなくなるはずです
+      # 引数をすべて削除 (v0.10 はサポートしていないため)
       - name: Build site 🔨
-        run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true, prettyurls=true, sitemap=true)'
+        run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
       # --- 修正点 2 ---
-      # 不要になった 'Edit sitemap.xml' ステップを削除します
-      
+      # 2つの問題を両方とも強制的に修正します
+      - name: Edit sitemap.xml 📝
+        run: |
+          # 1. 'google...html' のブロックを (改行ごと) 削除
+          perl -i -p0e 's|<url>\s*<loc>https://akita-kosuke.github.io/google99f26b157d2cc0de\.html</loc>.*?<priority>.*?</priority>\s*</url>||gs' __site/sitemap.xml
+          # 2. 'index.html' を削除
+          sed -i 's|/index\.html</loc>|</loc>|g' __site/sitemap.xml
+
       - name: Copy verification file 🔑
         run: cp google99f26b157d2cc0de.html __site/
 
