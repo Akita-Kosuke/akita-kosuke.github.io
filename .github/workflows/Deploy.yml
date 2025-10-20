@@ -18,7 +18,7 @@ jobs:
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
-          version: '1.10'
+          version: '1.10' # 安定版 '1.10' を使用
 
       - name: Install dependencies
         run: julia --project -e 'using Pkg; Pkg.instantiate()'
@@ -26,21 +26,15 @@ jobs:
       - name: Install highlight.js 💡
         run: julia --project -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
 
+      # --- 修正点 1 ---
+      # optimize に prettyurls=true を追加し、index.html を削除
       - name: Build site 🔨
-        run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
+        run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true, prettyurls=true)'
 
-      # --- 以下の2ステップを追加 ---
-      - name: 🐞 編集前のsitemap.xmlを表示
-        run: cat __site/sitemap.xml
+      # --- 修正点 2 ---
+      # 不要になった sed と cat (デバッグ用) のステップを全て削除
 
-      - name: Edit sitemap.xml 📝
-        run: |
-          sed -i 's|<url> *<loc>https://akita-kosuke.github.io/google99f26b157d2cc0de\.html</loc> *<lastmod>[^<]*</lastmod> *<changefreq>[^<]*</changefreq> *<priority>[^<]*</priority></url>||g' __site/sitemap.xml
-
-      - name: 🐞 編集後のsitemap.xmlを表示
-        run: cat __site/sitemap.xml
-      # --- ここまで追加 ---
-
+      # 認証ファイルをコピー (これは必要)
       - name: Copy verification file 🔑
         run: cp google99f26b157d2cc0de.html __site/
 
