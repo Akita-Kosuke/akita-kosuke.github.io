@@ -18,7 +18,7 @@ jobs:
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
-          version: '1.10'
+          version: '1.10' # 安定版 '1.10' を使用
 
       - name: Install dependencies
         run: julia --project -e 'using Pkg; Pkg.instantiate()'
@@ -27,18 +27,16 @@ jobs:
         run: julia --project -e 'using NodeJS; run(`$(npm_cmd()) install highlight.js`)'
 
       # --- 修正点 1 ---
-      # 引数をすべて削除 (v0.10 はサポートしていないため)
+      # 'prettyurls' などの v1系引数を削除 (v0.10 系のため)
       - name: Build site 🔨
         run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
       # --- 修正点 2 ---
-      # 2つの問題を両方とも強制的に修正します
+      # 'google...html' のブロックを (改行ごと) 削除します
+      # (index.html は問題ないため、sed は含めません)
       - name: Edit sitemap.xml 📝
         run: |
-          # 1. 'google...html' のブロックを (改行ごと) 削除
           perl -i -p0e 's|<url>\s*<loc>https://akita-kosuke.github.io/google99f26b157d2cc0de\.html</loc>.*?<priority>.*?</priority>\s*</url>||gs' __site/sitemap.xml
-          # 2. 'index.html' を削除
-          sed -i 's|/index\.html</loc>|</loc>|g' __site/sitemap.xml
 
       - name: Copy verification file 🔑
         run: cp google99f26b157d2cc0de.html __site/
