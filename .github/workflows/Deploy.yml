@@ -18,9 +18,8 @@ jobs:
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
-          version: '1.10' # 安定版 '1.10' を使用
+          version: '1.10'
 
-      # --- ここが修正点です (up=true を削除) ---
       - name: Install dependencies
         run: julia --project -e 'using Pkg; Pkg.instantiate()'
       
@@ -30,10 +29,17 @@ jobs:
       - name: Build site 🔨
         run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
-      # sed コマンドは前回の修正（\.html）のままです
+      # --- 以下の2ステップを追加 ---
+      - name: 🐞 編集前のsitemap.xmlを表示
+        run: cat __site/sitemap.xml
+
       - name: Edit sitemap.xml 📝
         run: |
           sed -i 's|<url> *<loc>https://akita-kosuke.github.io/google99f26b157d2cc0de\.html</loc> *<lastmod>[^<]*</lastmod> *<changefreq>[^<]*</changefreq> *<priority>[^<]*</priority></url>||g' __site/sitemap.xml
+
+      - name: 🐞 編集後のsitemap.xmlを表示
+        run: cat __site/sitemap.xml
+      # --- ここまで追加 ---
 
       - name: Copy verification file 🔑
         run: cp google99f26b157d2cc0de.html __site/
