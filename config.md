@@ -16,7 +16,7 @@ generate_sitemap = true
 # you might not want. Indicate directories by ending the name with a `/`.
 # Base files such as LICENSE.md and README.md are ignored by default.
 
-ignore = ["node_modules/"]
+ignore = ["node_modules/", "google99f26b157d2cc0de.html"]
 keep_path = ["google99f26b157d2cc0de.html", "robots.txt"]
 
 
