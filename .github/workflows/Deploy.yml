@@ -37,6 +37,11 @@ jobs:
       - name: Build site 🔨
         run: julia -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
+      # --- 以下の3行をここに追加してください ---
+      # 認証ファイルをサイトマップ生成後に手動でコピーする
+      - name: Copy verification file 🔑
+        run: cp google99f26b157d2cc0de.html __site/
+
       # 6. __site フォルダを master ブランチにデプロイ
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
