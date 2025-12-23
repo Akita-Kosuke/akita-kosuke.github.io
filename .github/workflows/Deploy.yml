@@ -29,17 +29,11 @@ jobs:
       - name: Build site 🔨
         run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
-      # --- 以下のステップを追加・変更 ---
-      - name: 🐞 編集前のsitemap.xmlを表示
-        run: cat __site/sitemap.xml
-
+      # サイトマップから認証ファイルと index.html を両方消す魔法の命令です
       - name: Edit sitemap.xml 📝
         run: |
           perl -i -p0e 's|<url>\s*<loc>https://akita-kosuke.github.io/google99f26b157d2cc0de\.html</loc>.*?<priority>.*?</priority>\s*</url>||gs' __site/sitemap.xml
-
-      - name: 🐞 編集後のsitemap.xmlを表示
-        run: cat __site/sitemap.xml
-      # --- ここまで ---
+          perl -i -pe 's|/index.html||g' __site/sitemap.xml
 
       - name: Copy verification file 🔑
         run: cp google99f26b157d2cc0de.html __site/
