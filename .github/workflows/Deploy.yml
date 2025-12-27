@@ -29,11 +29,14 @@ jobs:
       - name: Build site 🔨
         run: julia --project -e 'using Franklin; using NodeJS; Franklin.optimize(clear=true)'
 
-      # サイトマップから認証ファイルと index.html を両方消す魔法の命令です
+      # --- 修正箇所 ---
       - name: Edit sitemap.xml 📝
         run: |
+          # 1. 認証ファイルを削除
           perl -i -p0e 's|<url>\s*<loc>https://akita-kosuke.github.io/google99f26b157d2cc0de\.html</loc>.*?<priority>.*?</priority>\s*</url>||gs' __site/sitemap.xml
-          perl -i -pe 's|/index.html||g' __site/sitemap.xml
+          
+          # 2. "/index.html" を "/" (スラッシュ) に置換して、ディレクトリ形式にする
+          perl -i -pe 's|/index.html|/|g' __site/sitemap.xml
 
       - name: Copy verification file 🔑
         run: cp google99f26b157d2cc0de.html __site/
