@@ -8,9 +8,7 @@ tags = ["秋田康輔", "ホームページ", "データ同化", "大阪大学",
 
 # About me
 
-My major is statistics and information mathematics.
-In particular, I am working on data assimilation with uncertainty involving unknown models. 
-By considering tractable data transformation using kernel methods or Koopman operators, I aim to derive appropriate state estimation schemes combined with machine learning theoretically.
+Background in applied mathematics with research interests in statistics and information mathematics, focusing on parameter estimation, machine learning, and data assimilation under model uncertainty. As an extension of this focus, interested in applying Koopman operator theory to improve the tractability of complex dynamical systems and enhance the theoretical reliability of state estimation. 
 
 
 # 自己紹介
@@ -24,9 +22,16 @@ By considering tractable data transformation using kernel methods or Koopman ope
 * 応用数学
 * 統計学
 * 情報科学
-* 量子力学
 * 機械学習
 * 大阪大学
+
+* Data Assimilation
+* Mathematics
+* Applied Mathematics
+* Statistics
+* Information Science
+* Machine Learining
+* The University of Osaka
 
 ## CiNii Research ID（CRID）
 
