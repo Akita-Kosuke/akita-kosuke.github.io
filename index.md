@@ -6,14 +6,25 @@ tags = ["秋田康輔", "ホームページ", "データ同化", "大阪大学",
 +++
 
 
-# About me
+# About me（自己紹介）
 
 Background in applied mathematics with research interests in statistics and information mathematics, focusing on parameter estimation, machine learning, and data assimilation under model uncertainty. As an extension of this focus, interested in applying Koopman operator theory to improve the tractability of complex dynamical systems and enhance the theoretical reliability of state estimation. 
 
 
-# 自己紹介
+# Career（経歴）
 
-秋田康輔（あきたこうすけ）
+| Date | Affiliation / Degree |
+|---|---|
+| Oct. 1, 2026 – Present | Ph.D. Program, Graduate School of Information Science and Technology, Osaka University |
+| Apr. 1, 2020 – Mar. 22, 2022 | Master's Program, Graduate School of Information Science and Technology, Osaka University<br>(Degree: Master of Information Science and Technology) |
+| Apr. 1, 2016 – Mar. 25, 2020 | Department of Mathematics, School of Science, Osaka University<br>(Degree: Bachelor of Science) |
+
+
+|年月日|所属|
+|---|--|
+|2026.10.01~|大阪大学大学院情報科学研究科博士後期課程|
+|2020.04.01~2022.03.22|大阪大学大学院情報科学研究科博士前期課程（修士；情報科学）|
+|2016.04.01~2020.03.25|大阪大学理学部数学科（学士；理学）|
 
 ## Keywords（キーワード）
 
@@ -40,11 +51,10 @@ Background in applied mathematics with research interests in statistics and info
 # E-mail
 
 * akita[at]cas.cmc.osaka-u.ac.jp
+* k-akita[at]ist.osaka-u.ac.jp
 
 
 # Address
 
 * ???
-
-
 

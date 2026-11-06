@@ -11,8 +11,13 @@ tags = ["業績"]
 
 * TOEIC score：775（2025年）
 
+* IELTS Academic：Overall 5.5（L6.0 / R5.0 / W6.0 / S5.0）（2026年10月）
+
 * 中学校教諭専修免許状（数学）
 
 * 高等学校教諭専修免許状（数学）
 
 * 高等学校教諭一種免許状（情報）
+
+# Patents（特許）
+update coming soon
