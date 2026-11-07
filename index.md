@@ -13,28 +13,33 @@ Background in applied mathematics with research interests in statistics and info
 
 # Career（経歴）
 
-| Date | Affiliation / Degree |
-|---|---|
-| Oct. 1, 2026 – Present | Ph.D. Program, Graduate School of Information Science and Technology, Osaka University |
-| Apr. 1, 2020 – Mar. 22, 2022 | Master's Program, Graduate School of Information Science and Technology, Osaka University<br>(Degree: Master of Information Science and Technology) |
-| Apr. 1, 2016 – Mar. 25, 2020 | Department of Mathematics, School of Science, Osaka University<br>(Degree: Bachelor of Science) |
+| Date | Affiliation | Degree / Program |
+|---|---|---|
+| Oct. 1, 2026 – | Department of Pure and Applied Mathematics, Graduate School of Information Science and Technology, Osaka University | Ph.D. Program |
+| Apr. 1, 2020 – Mar. 24, 2022 | Department of Pure and Applied Mathematics, Graduate School of Information Science and Technology, Osaka University | Master of Information Science and Technology |
+| Apr. 1, 2016 – Mar. 25, 2020 | Department of Mathematics, School of Science, Osaka University | Bachelor of Science |
 
 
-|年月日|所属|
-|---|--|
-|2026.10.01~|大阪大学大学院情報科学研究科博士後期課程|
-|2020.04.01~2022.03.22|大阪大学大学院情報科学研究科博士前期課程（修士；情報科学）|
-|2016.04.01~2020.03.25|大阪大学理学部数学科（学士；理学）|
+| 年月日 | 所属 | 学位 / 課程 |
+|---|---|---|
+| 2026.10.01 – | 大阪大学大学院情報科学研究科情報基礎数学専攻 | 博士後期課程 |
+| 2020.04.01 – 2022.03.24 | 大阪大学大学院情報科学研究科情報基礎数学専攻 | 修士（情報科学） |
+| 2016.04.01 – 2020.03.25 | 大阪大学理学部数学科 | 学士（理学） |
+
+# E-mail
+
+* akita[at]cas.cmc.osaka-u.ac.jp
+* k-akita[at]ist.osaka-u.ac.jp
+
+# Address
+
+* ???
+
+## CiNii Research ID（CRID）
+
+[https://cir.nii.ac.jp/crid/1410012014701840256](https://cir.nii.ac.jp/crid/1410012014701840256)
 
 ## Keywords（キーワード）
-
-* データ同化
-* 数学
-* 応用数学
-* 統計学
-* 情報科学
-* 機械学習
-* 大阪大学
 
 * Data Assimilation
 * Mathematics
@@ -42,19 +47,10 @@ Background in applied mathematics with research interests in statistics and info
 * Statistics
 * Information Science
 * Machine Learining
-* The University of Osaka
 
-## CiNii Research ID（CRID）
-
-[https://cir.nii.ac.jp/crid/1410012014701840256](https://cir.nii.ac.jp/crid/1410012014701840256)
-
-# E-mail
-
-* akita[at]cas.cmc.osaka-u.ac.jp
-* k-akita[at]ist.osaka-u.ac.jp
-
-
-# Address
-
-* ???
-
+* データ同化
+* 数学
+* 応用数学
+* 統計学
+* 情報科学
+* 機械学習
