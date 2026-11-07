@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^git fetch origin; if \\(\\$\\?\\) \\{ git status --short --branch; git log --oneline --decorate --max-count=5 --graph HEAD origin/source \\}$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
