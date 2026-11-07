@@ -148,6 +148,33 @@ h6 {
 .franklin-content h6 a:hover { text-decoration: none; }
 
 .franklin-content table {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border-collapse: collapse;
+}
+
+.franklin-toc ol ol {
+  list-style-type: lower-alpha;
+}
+
+.franklin-content th,
+.franklin-content td {
+  font-size: var(--small);
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: top;
+}
+
+.franklin-content th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* .franklin-content table {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
@@ -163,7 +190,7 @@ td {
   font-size: var(--small);
   padding: 10px;
   border: 1px solid black;
-}
+} */
 
 .franklin-content blockquote {
   background: var(--block-background);
@@ -214,7 +241,7 @@ td {
 }
 
 .franklin-content .fndef tr,
-td {
+.franklin-content .fndef td {
   padding: 0;
   border: 0;
   text-align: left;
