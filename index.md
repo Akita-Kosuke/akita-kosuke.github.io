@@ -13,11 +13,11 @@ Background in applied mathematics with research interests in statistics and info
 
 # Career（経歴）
 
-| Date | Affiliation | Degree / Program |
+| Date | Affiliation | Degree / Programme |
 |---|---|---|
-| Oct. 1, 2026 – | Department of Pure and Applied Mathematics, Graduate School of Information Science and Technology, Osaka University | Ph.D. Program |
-| Apr. 1, 2020 – Mar. 24, 2022 | Department of Pure and Applied Mathematics, Graduate School of Information Science and Technology, Osaka University | Master of Information Science and Technology |
-| Apr. 1, 2016 – Mar. 25, 2020 | Department of Mathematics, School of Science, Osaka University | Bachelor of Science |
+| Oct. 1, 2026 – | Department of Pure and Applied Mathematics, Graduate School of Information Science and Technology, The University of Osaka | Ph.D. Programme |
+| Apr. 1, 2020 – Mar. 24, 2022 | Department of Pure and Applied Mathematics, Graduate School of Information Science and Technology, The University of Osaka | Master of Information Science and Technology |
+| Apr. 1, 2016 – Mar. 25, 2020 | Department of Mathematics, School of Science, The University of Osaka | Bachelor of Science |
 
 
 | 年月日 | 所属 | 学位 / 課程 |
@@ -35,11 +35,11 @@ Background in applied mathematics with research interests in statistics and info
 
 * ???
 
-## CiNii Research ID（CRID）
+# CiNii Research ID（CRID）
 
 [https://cir.nii.ac.jp/crid/1410012014701840256](https://cir.nii.ac.jp/crid/1410012014701840256)
 
-## Keywords（キーワード）
+# Keywords（キーワード）
 
 * Data Assimilation
 * Mathematics
